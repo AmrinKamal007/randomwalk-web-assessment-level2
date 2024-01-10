@@ -1,4 +1,4 @@
-// DOM ELEMENTS
+
 
 const squareOne = document.getElementById("grid__square-1");
 const squareTwo = document.getElementById("grid__square-2");
@@ -19,7 +19,6 @@ const startGameBtn = document.getElementById("instructions__btn");
 
 const modal = document.getElementById("modal");
 
-// VARIABLES
 
 const players = {
   playerOne: { name: "Jack", wins: 0 },
@@ -32,7 +31,7 @@ let pastPlayer;
 let currentImage = "cross";
 let playerHasWon = false;
 
-// SQUARE CLICKING
+
 
 function addSquareClick() {
   allSquares.forEach((square) => {
@@ -53,7 +52,7 @@ function squareClick() {
   }
 }
 
-// INCREMENT MOVE
+
 
 function incrementMove() {
   move += 1;
@@ -72,7 +71,7 @@ function incrementMove() {
   checkForTie();
 }
 
-// CHECK FOR WIN
+
 
 function checkForWin() {
   const lines = [
@@ -111,7 +110,7 @@ function playerWon() {
   continueGame();
 }
 
-// CHECK FOR TIE
+
 
 function checkForTie() {
   const squares = [
@@ -138,7 +137,7 @@ function checkForTie() {
   }
 }
 
-// CONTINUE / RESTART / RESET
+
 
 function continueGame() {
   removeSquareClick();
@@ -161,7 +160,7 @@ function reset() {
   infoText.innerHTML = `${nextPlayer}'s turn to start`;
 }
 
-// START GAME
+
 
 function startGame() {
   startGameBtn.addEventListener("click", () => {
